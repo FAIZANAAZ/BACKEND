@@ -1,0 +1,7 @@
+(1)npm install express
+(2)npm i --save-dev @types/node
+(3)const express = require('express')
+
+(4)const app = express()
+(5)npm i dotenv (sirf tb jb zarorat ho info rakheny ki sensitive)
+(6)npm install -g nodemon (jb hm chahty hen ke bar bar terminal ko run na krna prhy )

@@ -1,0 +1,33 @@
+for documentation
+https://www.mongodb.com/docs/manual/
+
+/////********************/////////////////////
+
+
+DAWNLOAD IN YOUR COMPUTER 
+Download the file from the link below
+https://www.mongodb.com/try/download/community
+
+/////********************/////////////////////
+
+AND DAWNLOAD mongodb COMPRASS
+https://www.mongodb.com/try/download/compass
+
+/////********************/////////////////////
+
+(1)open compass and click on new connection =>save=>create database =>enter name and collection name=> click on create  database
+(2)click on (add data)   =>insert data =>and make schema (one uniq id  mongodb data by default)
+
+//////*******************///////////////////
+USE IN PROJECT
+
+npm install mongodb @types/mongodb
+npx tsc --init
+import { MongoClient } from 'mongodb' 
+
+collection jo folder ke ander files ki trha bni hoti hen osmy + pr click krky hm orcollection bna skty hen or 
+folder pr jo + hota ospr  click krky hm  data base bna skty hen new
+
+/*** FOR RUN
+npx tsc 
+node (filename)index.js
