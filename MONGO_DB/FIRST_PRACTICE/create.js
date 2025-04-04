@@ -18,6 +18,8 @@ function main() {
             yield client.connect();
             const db = client.db('admin');
             const result = yield db.collection('Inventry').insertOne({
+                // insertone yani single document
+                // yani ek document ko insert karna
                 item: 'canvas',
                 qty: 100,
                 tags: ['cotton'],
@@ -25,6 +27,8 @@ function main() {
             });
             console.log('Inserted document id:', result.insertedId);
             const resultMany = yield db.collection('Inventry').insertMany([
+                // inventry jo likhe he ye or monogodb pr jo bnaya he name jismy data jayga name ame hona chiye
+                // insertmany yani multiple documents
                 {
                     item: 'canvas',
                     qty: 100,
@@ -61,3 +65,4 @@ function main() {
     });
 }
 main();
+// https://www.mongodb.com/docs/manual/tutorial/insert-documents/
