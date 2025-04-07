@@ -1,0 +1,159 @@
+⭐⭐⭐⭐⭐⭐ 1. insertOne()
+💡 Kya karta hai?
+Ek single document (record) collection ke andar insert karta hai.
+
+🔧 Example:
+```js
+db.users.insertOne({ name: "Ali", age: 24 })
+```
+Output:
+```json
+{
+  "acknowledged": true,
+  "insertedId": ObjectId("...")
+}
+```
+📦 Real Life Example:
+User signup karta hai tumhari app pe, to uska naam aur age store hoga database mein.
+
+
+⭐⭐⭐⭐⭐⭐ 2. insertMany()
+💡 Kya karta hai?
+Ek hi baar mein multiple documents insert karta hai.
+
+🔧 Example:
+```js
+db.users.insertMany([
+  { name: "Sara" },
+  { name: "Ahmed" }
+])
+```
+Output:
+```json
+{
+  "acknowledged": true,
+  "insertedCount": 2
+}
+```
+📦 Real Life Example:
+Admin ek hi baar mein 10 naye employees ka data enter karta hai system mein.
+
+
+⭐⭐⭐⭐⭐⭐ 3. find()
+💡 Kya karta hai?
+Multiple documents ko laata hai jo condition match karte hain.
+
+🔧 Example:
+```js
+db.users.find({ age: { $gte: 18 } })
+```
+Output:
+```json
+[
+  { "_id": 1, "name": "Ali", "age": 24 },
+  { "_id": 2, "name": "Sara", "age": 22 }
+]
+```
+📦 Real Life Example:
+College ki app mein tum dekhna chahte ho kon kon 18 saal se bada hai.
+
+
+⭐⭐⭐⭐⭐⭐ 4. findOne()
+💡 Kya karta hai?
+Sirf pehla document laata hai jo condition se match karta hai.
+
+🔧 Example:
+```js
+db.users.findOne({ name: "Ali" })
+```
+Output:
+```json
+{ "_id": 1, "name": "Ali", "age": 24 }
+```
+📦 Real Life Example:
+Login karte waqt sirf ek user ka record check karte ho — uska email ya naam.
+
+
+⭐⭐⭐⭐⭐⭐ 5. updateOne()
+💡 Kya karta hai?
+Ek document ko update karta hai — jo pehle match ho jaye.
+
+🔧 Example:
+```js
+db.users.updateOne({ name: "Ali" }, { $set: { age: 25 } })
+```
+Output:
+```json
+{ "matchedCount": 1, "modifiedCount": 1 }
+```
+📦 Real Life Example:
+Ali ne apna age profile mein update kiya to woh 25 ho gaya.
+
+
+⭐⭐⭐⭐⭐⭐ 6. updateMany()
+💡 Kya karta hai?
+Jo bhi documents condition se match karein sabko update karta hai.
+
+🔧 Example:
+```js
+db.users.updateMany({ active: false }, { $set: { banned: true } })
+```
+📦 Real Life Example:
+Tumne decide kiya ke sab inactive users ko banned karna hai ek hi baar mein.
+
+
+⭐⭐⭐⭐⭐⭐ 7. deleteOne()
+💡 Kya karta hai?
+Sirf pehla document delete karta hai jo condition se match kare.
+
+🔧 Example:
+```js
+db.users.deleteOne({ name: "Ali" })
+```
+📦 Real Life Example:
+User ne "delete account" dabaya, to uska account uda diya gaya.
+
+
+⭐⭐⭐⭐⭐⭐ 8. deleteMany()
+💡 Kya karta hai?
+Jo bhi documents condition se match karte hain sabko delete karta hai.
+
+🔧 Example:
+```js
+db.users.deleteMany({ banned: true })
+```
+📦 Real Life Example:
+Admin ne decide kiya ke sab banned users ko nikaal dena hai database se.
+
+
+⭐⭐⭐⭐⭐⭐ 9. countDocuments()
+💡 Kya karta hai?
+Query ke hisaab se kitne documents match karte hain uska exact count batata hai.
+
+🔧 Example:
+```js
+db.orders.countDocuments({ status: "delivered" })
+```
+Output:
+```json
+45
+```
+📦 Real Life Example:
+Dashboard pe show karwana ho ke kitne orders deliver ho chuke hain.
+
+
+⭐⭐⭐⭐⭐⭐ 10. distinct()
+💡 Kya karta hai?
+Kisi ek field ki unique values nikaalta hai.
+
+🔧 Example:
+```js
+db.users.distinct("country")
+```
+Output:
+```json
+["Pakistan", "India", "UAE"]
+```
+📦 Real Life Example:
+Tum dekhna chahte ho ke tumhare app ke users kis kis country se hain.
+

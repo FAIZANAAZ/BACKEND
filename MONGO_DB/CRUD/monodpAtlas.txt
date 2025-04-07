@@ -1,0 +1,39 @@
+(mongoDb Atlas) ***********
+   mongoDb Atlas ka use krky hmy kisi bhi jha oskodeploy krny ki zarorat nhi he
+
+
+open (https://www.mongodb.com/products/platform/atlas-database)
+click get start =>singUp with email or google account
+
+Database=> click on create =>enter the cluter name yani project name => development => copy username and password => click on connect to database => click on connect with application=>  produced to connect
+
+
+
+
+***********jb bn jay to connnect likha ata he
+home pr jha deploy databse bn kr ayga ospr click krengy connect pr
+connect=> Drivers =>right side pr ak string likha hoga osky nichy koch url sa hoga osko copy krengy or browser ke new tab me past krengy =>db_password likha hoga url me osko hta kr apna pasward past krengy wo hmy acces user me mily ga eidit pr click krky naya daldengy ya phly sy khi note kra hoto wo daldengy =>enter krengy to open mongodb compase likha ayga yes krengy => phir add new connection pr jaygy=>or new connection me wo url daldengy jo hmny broswer pr dala tha pasward ke sath =>nichy koi bhi name dengy 
+=>click on connect $ save => 
+
+***********create database
+
+phir wahi procees krengy  phly connect krengy =>+ pr click krengy =>data base name or collection name dengy save 
+
+phir jm hmara home page tha atlas ka wha pr hmy jo projct show hora hoga osmy brose collenction pr click krengy to wo data base a jayga jo compase me bnaya tha
+
+
+
+*****kisi dosry ko acces deny ke liye *****
+
+click on  Database Accses =>Add new database user => enter the username and password and buid-in-role (yani jo bhi acces deena he osko select krna he) => click on add user => click on edit user for edit or click on delete for delete
+
+
+////*********************
+https://www.mongodb.com/docs/manual/reference/operator/query/
+yha bhut sary mongodb ke apny operators hen jesy nad or in jo hm use kr skty hen
+
+
+agrication pipline
+operatores
+methods
+atlas

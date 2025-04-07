@@ -1,0 +1,241 @@
+⭐⭐⭐⭐⭐⭐ Useful MongoDB Operators (Full Explained) ⭐⭐⭐⭐⭐⭐
+
+
+⭐⭐⭐⭐⭐⭐ 1. $eq (Equal)
+💡 Kya karta hai?
+Kisi field ka value kisi specific cheez ke barabar ho ya nahi — ye check karta hai.
+
+🔧 Example:
+```js
+db.users.find({ age: { $eq: 25 } })
+```
+📦 Real Life Use:
+Show karo sirf wo users jinki age 25 hai.
+
+
+⭐⭐⭐⭐⭐⭐ 2. $ne (Not Equal)
+💡 Kya karta hai?
+Jo value match nahi karti — usko dikhata hai.
+
+🔧 Example:
+```js
+db.users.find({ city: { $ne: "Lahore" } })
+```
+📦 Real Life Use:
+Tumhe Lahore ke ilawa sab cities ke users chahiye.
+
+
+⭐⭐⭐⭐⭐⭐ 3. $gt / $lt (Greater Than / Less Than)
+💡 Kya karta hai?
+Value kisi number se zyada ho ($gt) ya kam ho ($lt) — ye check karta hai.
+
+🔧 Example:
+```js
+db.products.find({ price: { $gt: 100 } })
+```
+📦 Real Life Use:
+Jitne products ki price 100 se zyada ho — wo sab dikhane hain.
+
+
+⭐⭐⭐⭐⭐⭐ 4. $in
+💡 Kya karta hai?
+Field ki value agar given list me se kisi ek ke barabar ho to match karta hai.
+
+🔧 Example:
+```js
+db.users.find({ city: { $in: ["Karachi", "Lahore"] } })
+```
+📦 Real Life Use:
+Tum sirf Karachi ya Lahore ke users dekhna chahte ho.
+
+
+⭐⭐⭐⭐⭐⭐ 5. $nin (Not In)
+💡 Kya karta hai?
+Field ki value agar given list me se nahi hai to match karega.
+
+🔧 Example:
+```js
+db.users.find({ city: { $nin: ["Islamabad", "Lahore"] } })
+```
+📦 Real Life Use:
+Tum sab cities ke users chahte ho — bas Islamabad aur Lahore ke nahi.
+
+
+⭐⭐⭐⭐⭐⭐ 6. $and
+💡 Kya karta hai?
+Do ya zyada conditions ko ek sath check karta hai — sab true honi chahiye.
+
+🔧 Example:
+```js
+db.users.find({ $and: [{ age: { $gt: 18 } }, { active: true }] })
+```
+📦 Real Life Use:
+Sirf un logon ko dikhana hai jo active bhi hain aur 18 se bade bhi hain.
+
+
+⭐⭐⭐⭐⭐⭐ 7. $or
+💡 Kya karta hai?
+Agar koi ek condition bhi match ho jaye to document return karega.
+
+🔧 Example:
+```js
+db.users.find({ $or: [{ age: { $lt: 18 } }, { banned: true }] })
+```
+📦 Real Life Use:
+Ya to chhote users ya banned users chahiye.
+
+
+⭐⭐⭐⭐⭐⭐ 8. $exists
+💡 Kya karta hai?
+Ye check karta hai ke koi field document me maujood hai ya nahi.
+
+🔧 Example:
+```js
+db.users.find({ phone: { $exists: true } })
+```
+📦 Real Life Use:
+Wo users chahiye jinke paas phone number save hai.
+
+
+⭐⭐⭐⭐⭐⭐ 9. $regex
+💡 Kya karta hai?
+Ye pattern matching karta hai — jaise "name starts with A".
+
+🔧 Example:
+```js
+db.users.find({ name: { $regex: "^A" } })
+```
+📦 Real Life Use:
+Wo users jinke naam "A" se shuru hote hain.
+
+
+⭐⭐⭐⭐⭐⭐ 10. $set (sirf update mein use hota hai)
+💡 Kya karta hai?
+Update karte waqt kisi field ka naya value set karta hai.
+
+🔧 Example:
+```js
+db.users.updateOne({ name: "Ali" }, { $set: { age: 30 } })
+```
+📦 Real Life Use:
+User ne apna age update kiya — to tum database me naya value daal rahe ho.
+
+
+⭐⭐⭐⭐⭐⭐ 11. $unset
+💡 Kya karta hai?
+Kisi field ko document se hata deta hai.
+
+🔧 Example:
+```js
+db.users.updateOne({ name: "Ali" }, { $unset: { phone: "" } })
+```
+📦 Real Life Use:
+User chahta hai uska phone number database se hata diya jaye.
+
+
+⭐⭐⭐⭐⭐⭐ 12. $push
+💡 Kya karta hai?
+Kisi array ke andar naya value daal deta hai.
+
+🔧 Example:
+```js
+db.users.updateOne({ name: "Ali" }, { $push: { tags: "new" } })
+```
+📦 Real Life Use:
+User ke interest list mein naye interest add karna ho.
+
+
+⭐⭐⭐⭐⭐⭐ 13. $pull
+💡 Kya karta hai?
+Array me se koi specific value nikal deta hai.
+
+🔧 Example:
+```js
+db.users.updateOne({ name: "Ali" }, { $pull: { tags: "old" } })
+```
+📦 Real Life Use:
+User ke interest list me se koi purana interest hata rahe ho.
+
+
+⭐⭐⭐⭐⭐⭐ 14. $addToSet
+💡 Kya karta hai?
+Array me value daalta hai, lekin sirf agar pehle se nahi hai.
+
+🔧 Example:
+```js
+db.users.updateOne({ name: "Ali" }, { $addToSet: { skills: "MongoDB" } })
+```
+📦 Real Life Use:
+Duplicate data avoid karna ho — user ke skills list me naya skill sirf ek baar aaye.
+
+
+⭐⭐⭐⭐⭐⭐ 15. $all
+💡 Kya karta hai?
+Check karta hai ke array me given sare values hain ya nahi.
+
+🔧 Example:
+```js
+db.users.find({ skills: { $all: ["MongoDB", "Node.js"] } })
+```
+📦 Real Life Use:
+Wo users chahiye jo dono skills rakhte ho.
+
+
+⭐⭐⭐⭐⭐⭐ 16. $size
+💡 Kya karta hai?
+Array ki length check karta hai.
+
+🔧 Example:
+```js
+db.users.find({ skills: { $size: 3 } })
+```
+📦 Real Life Use:
+Tum dekhna chahte ho wo users jinke paas exactly 3 skills listed hain.
+
+
+⭐⭐⭐⭐⭐⭐ 17. $type
+💡 Kya karta hai?
+Check karta hai ke kisi field ka data type kya hai.
+
+🔧 Example:
+```js
+db.users.find({ age: { $type: "int" } })
+```
+📦 Real Life Use:
+Tum ensure karna chahte ho ke age sirf number type mein hi ho.
+
+
+⭐⭐⭐⭐⭐⭐ 18. $expr
+💡 Kya karta hai?
+Document ke andar hi calculation ya comparison karne deta hai.
+
+🔧 Example:
+```js
+db.orders.find({ $expr: { $gt: ["$total", "$paid"] } })
+```
+📦 Real Life Use:
+Check karna ho ke order ka total paid amount se zyada hai ya nahi.
+
+
+⭐⭐⭐⭐⭐⭐ 19. $mod
+💡 Kya karta hai?
+Remainder check karta hai (modulus operation).
+
+🔧 Example:
+```js
+db.users.find({ age: { $mod: [2, 0] } })
+```
+📦 Real Life Use:
+Even age wale users nikalna ho (2 se divide hone wale).
+
+
+⭐⭐⭐⭐⭐⭐ 20. $text
+💡 Kya karta hai?
+Full-text search karta hai — jisme tum kisi keyword ko match kar sakte ho.
+
+🔧 Example:
+```js
+db.articles.find({ $text: { $search: "mongodb" } })
+```
+📦 Real Life Use:
+Tumhare blog mein user "mongodb" dhoond raha ho to matching articles dikhane ke liye.
