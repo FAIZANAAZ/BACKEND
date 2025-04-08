@@ -1,0 +1,24 @@
+node js ak run time envornment he *****
+npm or npx isi ke hen 
+ye comunication krta he database sy or bat krky yehi connect krta he frorntednd or backend 
+
+ye javascript ko server ke ilawa bhi dosri jga use krny ki ijazat deta he 
+
+npm(node pekage manager)*******
+npm ka kam he install krna kisi pekige ko yani3rd party library ko or isy kiye gai installation har jha ho jati he 
+
+npx(node peckage executer)******
+npx bhi installation hi krta he lekin ye sirf osy me install  dalta he jismy kam kry hen
+
+run node -v 
+ye cheq kryga system me ke install hoggya he ya nhi 
+
+ismy kam krny ke liye sbsy phly***********
+
+(1)npm init -y(isy peskig.jsonki file bnygi )
+(2)npm i -y
+(3)npm install typescript ts-node @types/node --save-dev
+(4)npx tsc --init
+(5)
+
+
