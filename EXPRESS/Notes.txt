@@ -1,7 +1,63 @@
 (1)npm install express
-(2)npm i --save-dev @types/node
+(2)npm i --save-dev @types/express
+(3)npm install --save-dev typescript ts-node @types/node
+(4)npx tsc --init
+
 (3)const express = require('express')
 
 (4)const app = express()
 (5)npm i dotenv (sirf tb jb zarorat ho info rakheny ki sensitive)
 (6)npm install -g nodemon (jb hm chahty hen ke bar bar terminal ko run na krna prhy )
+
+info********************
+Express is a lightweight and flexible Node.js web application framework that provides an extensive set of features for building web applications.
+
+it simplifies building web application and apis by providing a robust set of features
+
+Routing ******************
+Define application routes using the HTTP methods (GET, POST, PUT, DELETE, etc.) Support dynamic and nested routes
+ye actual me api ka url hota he
+Middleware*********
+Functions executed in tha request-response cycle.
+
+
+TEMPLATING *************
+integrates with templating engines like EJS, Pug, and Handlebars to generate dynamic HTML content.
+
+HTTPS***************
+httpa ke do methods hoty hen
+
+get yani data desplay krna he dikhana data 
+post yani data send krna he data ko server pr send krna he create krna yani
+
+*******kisi bhi api ka data ko forntend sy backend me bhejny ke 3 tariky hen 
+============
+(1)data jeson me rkha kr bhej skty hen backend me ye 
+ody data ye data parameters me jata he jo ke api me backend me hota he or data kobpdy me bhejty hen 
+=============
+(2)ya data ko query me bhi bhej skty hen  yani url me rakh kr yani wahi query jesy hm ? lgany ke bad bnaty hen zada tr hm get me use krty hen
+
+thankder client me hm jesy pody me rakhty hena chizon ko osi me body ko hta kr hm agr query ka tab open kren or osmy key varible de dengy wo hmara paramete bhi hoga or url me bhi khod add hota rhy ga
+
+usecase index.ts ki file me he 
+
+=============
+
+(3)params me bhi dynamic perameter ke zariye bhi bhej skty hen 
+
+************
+JB HM THANDER CLIENT ME YE body me data rkh kr bhejry hoty hen wo isi liye hota he ke hmary pas abhi frontend nhi he to nakli ki rontend bnai hmny esa samj lo
+
+
+
+
+
+// ********MIDLE WARE*********
+
+
+// Middleware wo functions hote hain jo request aur response ke beech me aate hain. Ye request ko modify kar sakte hain ya response bhejne se pehle kuch kaam kar sakte hain
+
+Middleware ke pas 3 parameters hote hain:
+1. req (request)
+2. res (response)
+3. next (next middleware)
