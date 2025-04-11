@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express';
+import checkToken from './routMideleware';
 // import express:
 // Express ek Node.js ka web framework hai — is line se hum usse apne project me laa rahe hain.
 
@@ -21,21 +22,21 @@ let myToken='1234';
 
 // custom midleware ka matlb ye he ke wo abhi har rout pr applay hojayga hm agr chahty hn ke hm ak rout middleware krty hen jismy hm btaty hen sirf ispr hi applay ho 
 
-const  checkToken = (req: Request, res: Response, next: Function): void => {
-    // Ye middleware function hai jo har request se pehle chalega
-    if(req.query.token !== myToken||req.query.token==""||req.query.token==undefined) {
-        res.send({status:0, message: 'Unauthorized'});
+// const  checkToken = (req: Request, res: Response, next: Function): void => {
+//     // Ye middleware function hai jo har request se pehle chalega
+//     if(req.query.token !== myToken||req.query.token==""||req.query.token==undefined) {
+//         res.send({status:0, message: 'Unauthorized'});
         
-    // Ye check karta hai ke kya request me token === hai ya nahi
+//     // Ye check karta hai ke kya request me token === hai ya nahi
    
-    }else{
-        next();
+//     }else{
+//         next();
 
-    }
-        // next() ko call karna zaroori hai warna request aage nahi badegi yani code agy run hi nhi hoga 
-}
+//     }
+//         // next() ko call karna zaroori hai warna request aage nahi badegi yani code agy run hi nhi hoga 
+// }
 
-app.use(checkToken);
+// app.use(checkToken);
 
 // ye pass hoga to hi agy ka code run hoga wrna nhi hoga pass hoga to next middleware pr bhejdega
 
@@ -70,6 +71,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 
+
 // for params
 app.get('/user/:id', (req: Request, res: Response) => {
     res.send({status:1, message: 'dynamic params', id: req.params.id});
@@ -84,7 +86,8 @@ app.get('/user/:id', (req: Request, res: Response) => {
 // is yrl or ye acees hoga  2  likhen 4 8 koch bhi ye a jayga or id me wahi print kryga
 
 // *************************
-app.post('/api', (req: Request, res: Response) => {
+// yha hmny checkToken lgaya he kisi dosri file sy lakr or sirf yha lagaya he matlb bs yahi execute hoga
+app.post('/api',checkToken, (req: Request, res: Response) => {
     res.send(
         {status:1,
          message: 'Hello API!',

@@ -27,6 +27,7 @@ async function run() {
 		console.log(await inventory.findOne({ tags: { $in: ['cotton', 'acrylic'] }})); // fetch a document with tags cotton or acrylic
 
 		// *******findone yani wo aray sy hta de ga jo pehla milay ga yani first document ko hi return karega osky bad bhi agr hoga to wo ignore krdega************
+		// or findone ko zada tar id dekr use krty hen kioky ye sirf phly waly ko othata he lekin id to hoti hi ak he
 		
 	} finally {
 		await client.close();

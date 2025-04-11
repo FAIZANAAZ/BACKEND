@@ -52,7 +52,7 @@ JB HM THANDER CLIENT ME YE body me data rkh kr bhejry hoty hen wo isi liye hota 
 
 
 
-// ********MIDLE WARE*********
+// ********MIDLE  CUSTOM*********
 
 
 // Middleware wo functions hote hain jo request aur response ke beech me aate hain. Ye request ko modify kar sakte hain ya response bhejne se pehle kuch kaam kar sakte hain
@@ -61,3 +61,13 @@ Middleware ke pas 3 parameters hote hain:
 1. req (request)
 2. res (response)
 3. next (next middleware)
+
+
+// ****************** MIDLEWARE IN ROUT LEVEL *****************
+// Ye middleware sirf is route pr apply hoga Jo rout hm osko btaengy rout mean /page /new etc
+
+// ye hm dosri file me bnaty he or phir yha lakr osi file ke bich me chala dety hen  import krky 
+
+//************ENV FILE ***********
+npm i dotenv
+get for procees.env.variablename
