@@ -70,12 +70,18 @@ node (filename)index.js
 
 atlas me use krny sy hmy koi installation nhi krni hoti bs browser prlive jakr kam krty hen 
 
-search to mongodbAtlas(https://www.mongodb.com/products/platform/atlas-database)=>continue with google=>open database
+search to mongodbAtlas(https://www.mongodb.com/products/platform/atlas-database)=>continue with google=>open database mongodb atlas
 
-set username and passward 
+set username and passward *******
  wha hm jitny chahy user add kr skty hen wowo user hmara database pr acces kr skty hen
- go DATA access => add new database user=>enter username and passward =>slect buit in atlas =>click =>click add user=>
+ go DATA access => add new database user=>enter username and passward =>slect buit in role =read and write to any database  =>click add user=>
 
+Set  Network Access**********
+ go to network accecess =>click on add ip adrass=>click on Allow acces from anywere=>confirm=>ak ip adress bn kr a jayga or active likha a jayga (000.00)ka mtlb he kisi bhi kisam ki request a skti he 
+
+again gotot clustor=>connect =>connect your application (hmny jo name sy bnaya he wo already select hoga osky nichy ak string hogi jisko copy krengy  )=>past in .env file =>OSI STRING MESY <db_passward> htaengy or oski  jha apna passward likhengy wo wala jo hmny username rpasward me rkha tha 
+
+ab wo kam krna he jo main.py me krna he 
 
 
 
@@ -100,7 +106,7 @@ yha hm sari chizon kp procees handle krty hen
 
 cluster**
 
-   ye main.py ya koi bhi file jo hoti he osko mongodb sy connect krny ke liye ak connection string choye hoti he jo ke provide krta he cluster
+   ye main.py ya koi bhi file jo hoti he osko mongodb sy connect krny ke liye ak connection string chaiye hoti he jo ke provide krta he cluster
 
 
 COLLECTION STRING**
@@ -108,4 +114,10 @@ connection files ki trha hota he har chiz ka alagconnect hota he jesy har chema 
 
 
 
+ Network Access***
+ iska matlb he database abhi activ koi bhi request a ski he or ja skti he yani kam ho skt he network access krny ke bad
 
+
+# uv add rich in terminal
+# Rich is a python library that allows you to print text in the terminal with syntax highlighting, tables, and
+# yani bs ak trha sy acha sa bna deta he 
