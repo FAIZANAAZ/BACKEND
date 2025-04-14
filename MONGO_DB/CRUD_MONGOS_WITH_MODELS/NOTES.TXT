@@ -1,0 +1,10 @@
+npm i -y
+npm i express
+npm i mongoose
+npm i dotenv
+npm i --save-dev @types/express
+npx tsc --init
+
+https://www.npmjs.com/package/mongoose for mongoose 
+
+mongoose sy ye hota he ke hamare database ke saath connect ho jaye ga smartly or sath osky hm port bhi osi me deffines kr dety hen  bs iska yehi kam he zada 

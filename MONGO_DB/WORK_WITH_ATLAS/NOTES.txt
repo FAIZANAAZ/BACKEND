@@ -1,0 +1,127 @@
+for documentation
+https://www.mongodb.com/docs/manual/
+
+/////********************/////////////////////
+
+
+DAWNLOAD IN YOUR COMPUTER 
+Download the file from the link below
+https://www.mongodb.com/try/download/community
+
+/////********************/////////////////////
+
+AND DAWNLOAD mongodb COMPRASS
+https://www.mongodb.com/try/download/compass
+
+/////********************/////////////////////
+
+(1)open compass and click on new connection =>save=>create database =>enter name and collection name=> click on create  database
+(2)click on (add data)   =>insert data =>and make schema (one uniq id  mongodb data by default)
+
+*****make project by commands******
+1=run use anyname 
+os name sy ak new data base bn jayga mongodb me auto
+db.dropDatabase(databaseName)
+***isy delet ho jayga data 
+2=db.createCollection(anyname)
+os name sy collection bn jaygi ab 
+***db.collectionname.drop()
+os name sy collection delete ho jaygi ab
+***db.renameCollection(anyname you want to rename )
+3=db.collectionNmae.inser/insermany(
+   os name sy data insert ho jaygi ab
+   {"NAME":"faiza}
+)
+
+4=db.collectionNmae.find().pretty()
+os name sy data show ho jaygi ab jo bhi hmny dala he nazr a jayga .pretty matlb clean krky dikhao 
+
+5=
+
+run show db/database ************
+isy sary database ki list show ho jati hen
+
+run show collection ************
+isy sary collection ki list show ho jati hen
+
+phir wo krna he crud ke liye jo ke crud folderme he 
+
+//////*******************///////////////////
+USE IN PROJECT
+
+npm install mongodb @types/mongodb
+npx tsc --init
+import { MongoClient } from 'mongodb' 
+
+collection jo folder ke ander files ki trha bni hoti hen osmy + pr click krky hm orcollection bna skty hen or 
+folder pr jo + hota ospr  click krky hm  data base bna skty hen new
+
+/*** FOR RUN
+npx tsc 
+node (filename)index.js
+
+
+
+
+
+
+
+//////*******************///////////////////MONGODB USE WITH ATLAS //////*******************///////////////////
+
+atlas me use krny sy hmy koi installation nhi krni hoti bs browser prlive jakr kam krty hen 
+
+search to mongodbAtlas(https://www.mongodb.com/products/platform/atlas-database)=>continue with google=>open database mongodb atlas
+
+set username and passward *******
+ wha hm jitny chahy user add kr skty hen wowo user hmara database pr acces kr skty hen
+ go DATA access => add new database user=>enter username and passward =>slect buit in role =read and write to any database  =>click add user=>
+
+Set  Network Access**********
+ go to network accecess =>click on add ip adrass=>click on Allow acces from anywere=>confirm=>ak ip adress bn kr a jayga or active likha a jayga (000.00)ka mtlb he kisi bhi kisam ki request a skti he 
+
+again gotot clustor=>connect =>connect your application (hmny jo name sy bnaya he wo already select hoga osky nichy ak string hogi jisko copy krengy  )=>past in .env file =>OSI STRING MESY <db_passward> htaengy or oski  jha apna passward likhengy wo wala jo hmny username rpasward me rkha tha 
+
+ab wo kam krna he jo main.py me krna he 
+
+
+
+
+
+
+
+
+info*************
+Mongodb**
+
+Mongodb is a document database and no sql 
+no sql yani wo table wagera me nh hoga 
+mongodb me data json format me hota hain
+it is design for high -vloluem data and high scalability
+mongo db mosk commonly use with node js
+mongodb provide powerful aggregation
+
+
+compass:
+yha hm sari chizon kp procees handle krty hen 
+
+cluster**
+
+   ye main.py ya koi bhi file jo hoti he osko mongodb sy connect krny ke liye ak connection string chaiye hoti he jo ke provide krta he cluster
+
+
+COLLECTION STRING**
+connection files ki trha hota he har chiz ka alagconnect hota he jesy har chema ke liye alag file bnaty thy hm
+
+
+
+ Network Access***
+ iska matlb he database abhi activ koi bhi request a ski he or ja skti he yani kam ho skt he network access krny ke bad
+
+
+# uv add rich in terminal
+# Rich is a python library that allows you to print text in the terminal with syntax highlighting, tables, and
+# yani bs ak trha sy acha sa bna deta he 
+
+mongoos********
+jo hm schema bnaty hen sb krty hen kis type ki field he wo sb ismy hm krty hen mongos internally 
+mongodb ko hi use krta he  

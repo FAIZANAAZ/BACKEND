@@ -1,0 +1,32 @@
+run npm create vite@
+  cd frontend    
+  npm install 
+
+  for run file   
+  npm run dev   
+
+vit ka project   http://localhost:5173/  pr run hota he
+
+for tailwindcss****
+npm i -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+create tailwind.config.js 
+past :
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+in index.css past
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+flowbit 

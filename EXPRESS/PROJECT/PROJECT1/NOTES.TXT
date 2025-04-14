@@ -1,0 +1,7 @@
+npm init -y
+npm i express
+npm i nodemon
+npm i --save-dev @types/express
+npm i mongodb
+
+go to compas => connection pr click krna he or url copy krna he =>
