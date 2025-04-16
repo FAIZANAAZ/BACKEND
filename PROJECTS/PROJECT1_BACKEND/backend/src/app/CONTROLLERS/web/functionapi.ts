@@ -1,6 +1,7 @@
 import schema from "@/app/MODELS/enquiry.model";
 
 
+
 export const insert_api = async (req: any, res: any) => {
     const { name, email, phone, message } = req.body;
     console.log(name, email, phone, message);
@@ -37,9 +38,10 @@ export const update_api=async (req: any, res: any) => {
     const id: string = req.params.id;
     const { name, email, phone, message } = req.body;
   
+    const updateibj={ name, email, phone, message }
     const update = await schema.updateOne(
       { _id: id },
-      { $set: { name, email, phone, message } }
+      updateibj
     );
   
     res.send({
@@ -60,4 +62,11 @@ export const delete_api=async (req: any, res: any) => {
         status: 200
 
     })
+}
+
+
+export const single_data_for_update=async (req: any, res: any) => {
+    const id : string = req.params.id
+    const enquiry = await schema.findOne({ _id: id })
+    res.send(enquiry)
 }

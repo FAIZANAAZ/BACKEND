@@ -1,9 +1,11 @@
 import router from "@/app/ROUTES/web/enquiryrout";
 import express from "express";
 import mongoose from "mongoose";
-
+import cors from "cors"
 
 const app= express();
+app.use(cors())
+// ye isi liye he cors ke agr frontend or backend ka port number different hoto msla na ho 
 app.use(express.json());
 // connect momgoose
 
