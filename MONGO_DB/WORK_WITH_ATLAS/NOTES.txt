@@ -73,7 +73,7 @@ atlas me use krny sy hmy koi installation nhi krni hoti bs browser prlive jakr k
 search to mongodbAtlas(https://www.mongodb.com/products/platform/atlas-database)=>continue with google=>open database mongodb atlas
 
 set username and passward *******
- wha hm jitny chahy user add kr skty hen wowo user hmara database pr acces kr skty hen
+ wha hm jitny chahy user add kr skty hen wo user hmara database pr acces kr skty hen
  go DATA access => add new database user=>enter username and passward =>slect buit in role =read and write to any database  =>click add user=>
 
 Set  Network Access**********
@@ -82,10 +82,6 @@ Set  Network Access**********
 again gotot clustor=>connect =>connect your application (hmny jo name sy bnaya he wo already select hoga osky nichy ak string hogi jisko copy krengy  )=>past in .env file =>OSI STRING MESY <db_passward> htaengy or oski  jha apna passward likhengy wo wala jo hmny username rpasward me rkha tha 
 
 ab wo kam krna he jo main.py me krna he 
-
-
-
-
 
 
 

@@ -1,0 +1,167 @@
+DNS (Domain Name System):
+Kaam: DNS ka kaam website ke naam (domain) ko IP address mein convert karna hota hai.
+
+Kaise Kaam Karta Hai: Jab aap website ka naam (example: google.com) likhte hain, toh aapka browser DNS server se IP address request karta hai. DNS server phir correct IP address deta hai, jisse aapka browser website ko load kar sakta hai.
+
+Types:
+
+Root DNS: Sabse pehle query ko process karta hai aur TLD server ko direction deta hai.
+
+TLD DNS: Top-Level Domain ke queries ko handle karta hai, jaise .com, .net, .org.
+
+Authoritative DNS: Final IP address provide karta hai jo actual website ke server se connect hota hai.
+
+Protocol (TCP - Transmission Control Protocol):
+Kaam: TCP ek protocol hai jo data transmission ke rules set karta hai.
+
+Kaise Kaam Karta Hai: Jab do computers ko data exchange karna hota hai, TCP ensure karta hai ke dono computers ke beech communication ek proper sequence mein ho, jise samajh paaye aur data sahi tareeqe se transfer ho.
+
+
+Protocols and Web Communication:
+TCP Connection:
+
+Kaam: TCP connection banane ke liye pehle "Hello" bolte hain, jisse confirm ho jaata hai ke connection establish ho gaya hai.
+
+Kaise Kaam Karta Hai: Jaise phone par baat karte waqt pehle "Hello" bola jaata hai, waise hi TCP connection mein dono computers pehle connection establish karte hain.
+
+HTTP and HTTPS:
+
+HTTP:
+
+Kaam: HTTP web browsers aur servers ke beech communication establish karta hai. Yeh communication plaintext hota hai, yani data encrypted nahi hota.
+
+Kaise Kaam Karta Hai: HTTP basic communication protocol hai jo simple data transfer ko allow karta hai.
+
+HTTPS:
+
+Kaam: HTTPS HTTP ka secure version hai, jo data ko encrypt karke transfer karta hai.
+
+Kaise Kaam Karta Hai: HTTPS mein data ko encryption ke through protect kiya jaata hai taake koi bhi data ko intercept karke use na kar sake. Yeh particularly sensitive data jaise passwords ke liye use hota hai.
+
+Protocol Functionality:
+
+Encryption: HTTPS mein communication encrypted hota hai, jisme data ko ek code word mein convert kar diya jaata hai, jo only server pe hi decode hota hai.
+
+TCP ki Role: TCP ensure karta hai ki data sahi order mein aur without errors transfer ho. Agar koi data miss ho jata hai, toh TCP usse dobara send karwata hai.
+
+Core Modules in Node.js:
+
+FS (File System): File operations ko handle karta hai, jaise file read, write, etc.
+
+HTTP: Web server banane aur client-server communication ke liye use hota hai.
+
+HTTPS: Secure communication ke liye use hota hai, jab sensitive data transfer karna ho.
+
+Path: File paths ko handle karta hai, jaise relative aur absolute paths.
+
+Core Modules Usage:
+
+Node.js mein core modules pre-installed hote hain, jise aap directly use kar sakte hain bina installation ke.
+
+Examples: FS, HTTP, Path, etc.
+
+Require Keyword:
+
+Kaam: require keyword ka use hota hai modules ko import karne ke liye. Yeh kisi bhi module ko (core ya external) apne code mein include karta hai.
+
+**************************
+ChatGPT said:
+Node.js Server Setup and Module Usage
+Requiring Modules:
+
+Kaam: Jab bhi aap kisi module ko apne code mein use karna chahte hain, to aapko require keyword ka use karna padta hai. Yeh batata hai ke aapko kis module ki functionality ki zarurat hai.
+
+Kaise Kaam Karta Hai:
+
+Jab aap module ko require karte hain, wo aapke code mein include ho jata hai.
+
+Agar aapne ek module ko pehle require kiya hai, to uske baad wo cache ho jata hai aur aapko baar-baar load karne ki zarurat nahi padti.
+
+File Paths and Module Inclusion:
+
+Local Files: Agar aap apni local file ko require karna chahte hain, to aapko relative path dena padta hai (e.g., ./myModule.js).
+
+Core and Third-party Modules:
+
+Core modules (jaise fs, http) ko direct use kar sakte hain.
+
+Agar aap third-party modules use kar rahe hain, to unko bhi direct module name se require kiya ja sakta hai.
+
+Creating the Server:
+
+HTTP Module: Agar aapko server create karna ho, to aapko http module ki zarurat hoti hai. Yeh module server aur client ke beech communication establish karta hai.
+
+Server Functionality:
+
+http.createServer() function ka use karke ek basic server banaya jaata hai.
+
+Server ko request aur response handle karne ke liye callback function diya jaata hai.
+
+Handling Requests:
+
+Request-Response: Jab client server se request bhejta hai, to server response bhejta hai.
+
+Callback Function: Server request ko handle karne ke liye callback function ka use karta hai. Yeh function two arguments—request aur response—ko accept karta hai.
+
+Creating First Server (Practical Example):
+
+Server Creation Code:
+
+javascript
+Copy
+const http = require('http');
+const server = http.createServer((req, res) => {
+  res.write('Hello, World!');
+  res.end();
+});
+server.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+Listening for Requests: Server ko constantly requests sunte rehna padta hai, jise server.listen() function se achieve kiya jata hai.
+
+TCP Communication:
+
+Port and Address: Server har port par requests receive karta hai. Port ko ek specific channel samjha jaa sakta hai jahan se incoming requests ko handle kiya jaata hai.
+
+Modular Structure:
+
+Modularization: Code ko reusable banane ke liye aap apne logic ko alag modules mein divide kar sakte hain, aur unhe require karke use kar sakte hain.
+
+*****************************************
+Port Configuration:
+
+Custom Ports: Jab aap apna local server banate hain to aap kisi bhi port number ka use kar sakte hain. Generally, standard ports jaise 80 aur 443 use hote hain production servers ke liye. Lekin local development ke liye aap port 3000, 3001, etc., choose kar sakte hain.
+
+Handling Port Conflicts: Agar port 3000 already use ho raha ho, to aap port 3001 ya koi aur available port use kar sakte hain. Iske liye aapko sirf port number change karna hota hai.
+
+Starting the Server:
+
+Node Command: Jab aap node app.js command run karte hain to server start hota hai. Agar port pe koi request nahi milti, to kuch nahi hota, lekin jab request aati hai, to server usko handle karta hai.
+
+Server Listening: Server ko request sunne ke liye "listen" method ka use karte hain, jisme aapko port aur callback function dena padta hai. Jab server successfully run hota hai, to yeh callback function call hota hai.
+
+Accessing the Local Server:
+
+Localhost: Apne local server ko access karne ke liye aap 127.0.0.1 ya localhost likhte hain, followed by port number (e.g., localhost:3001).
+
+Request Logging: Jab aap browser se request bhejte hain, to server us request ko receive karta hai aur uska data console par log karta hai. Yeh data aap request headers aur other information ke roop mein dekh sakte hain.
+
+Request Information:
+
+HTTP Headers: Server aane wali request ke headers ko log karta hai, jaise connection type, browser type, accepted languages, etc.
+
+Data Inspection: Request ke through aapko jo data milta hai usme multiple details hoti hain, jise aap analyze kar sakte hain. Iske liye aap console log ka use karte hain.
+
+Debugging and Handling Server Errors:
+
+Port Conflict Handling: Agar koi port already use ho raha ho to aapko error milega. Is case mein aap port number change kar ke dubara try karte hain.
+
+Server Restart: Jab bhi aap code mein changes karte hain, aapko server ko restart karna padta hai taake naye changes reflect ho sakein. Iske liye aap Ctrl + C se server ko kill kar sakte hain aur node app.js se dubara start kar sakte hain.
+
+Enhanced Server Response:
+
+Dynamic Response: Server ko dynamically respond karne ke liye, aap HTTP headers aur body data ko modify kar sakte hain, jaise status codes, content types, etc.
+
+Server Status: Jab server start hota hai, to aapko ek message milta hai jisme yeh bataya jata hai ke server kis port pe run kar raha hai.
+
+*****************************
