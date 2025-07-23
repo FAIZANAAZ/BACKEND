@@ -165,3 +165,4 @@ Dynamic Response: Server ko dynamically respond karne ke liye, aap HTTP headers 
 Server Status: Jab server start hota hai, to aapko ek message milta hai jisme yeh bataya jata hai ke server kis port pe run kar raha hai.
 
 *****************************
+hm nodejs me routing if elsey sy krty hen ke agr url ye ho to ye ay /product hoto ye ay 

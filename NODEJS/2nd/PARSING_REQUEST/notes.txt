@@ -1,0 +1,26 @@
+STREAMS***********
+stream yani thora thora krky ana 
+ismy ak ****socket**** hota he joky kisi connection jo server sy jorta he
+duplex stream ka matlb do kam ak sath hona he joky data send krna he aur data receive krna  server or clients 
+
+CHUNKS ***********
+streams me jo data thora thora krky ata he yani tokro me to os tokry ko khty hen chunks
+
+
+BUFFERS
+BUFFER HM Isi liye bnaty hen taky chuks agy pichy na hon stream me wo line ba line siquence sy jay jo phly jana he wo phly jo bad me jana he wo bad me 
+
+input =>BUFFER=>output
+
+************************
+tye of response and request************
+IncomingMessage aur ServerResponse HTTP module se import kiye gaye hain. Yeh objects HTTP request aur response ko handle karte hain.
+
+IncomingMessage request ko represent karta hai, jaise client se aane wali data.
+
+ServerResponse response ko represent karta hai, jo server client ko bhejta hai.
+
+************************
+new UseSearchParams()/******************
+    // ye jesy ajeeb sa url ata he 12=1$&2=2$&3=3$ isko key value pairs keproper object me badlta he
+****************************

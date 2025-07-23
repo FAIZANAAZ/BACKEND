@@ -1,8 +1,8 @@
 import http from 'http';
+import { reqHandler } from './form.js';
+// hm node
 // **********************
-const server = http.createServer(function (request, response) {
-    response.end("oooo world");
-});
+const server = http.createServer(reqHandler);
 const port = 3000;
 server.listen(port, () => {
     console.log(`server is running on port ${port}`);
