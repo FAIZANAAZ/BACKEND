@@ -24,3 +24,54 @@ ServerResponse response ko represent karta hai, jo server client ko bhejta hai.
 new UseSearchParams()/******************
     // ye jesy ajeeb sa url ata he 12=1$&2=2$&3=3$ isko key value pairs keproper object me badlta he
 ****************************
+writeFileSync hm tb use krty hen jb hmy koi kam zarori krwana ho phly wrna hm normally sync nhi lgaty kioky isy wo sara code block kr deta he or phir isky bad dosry code ko run krta he 
+****************************
+1. Event Driven:
+Event-driven programming ka matlab hai ke jab tak koi event (jaise button ka click hona, ya kisi file ka upload hona) trigger nahi hota, tab tak program kuch nahi karega.
+
+Node.js bhi event-driven hai, iska matlab hai ke program ka flow events ke upar depend karta hai. Jaise hi koi event hota hai, Node.js usse handle karta hai aur usse execute karta hai.
+
+Example: Jab aap kisi web page par button click karte hain, toh wo ek event hai. Node.js us event ko handle karta hai aur koi action perform karta hai.
+
+**************************
+
+2. Single Threaded:
+Node.js single-threaded hai, iska matlab hai ke ek waqt me sirf ek kaam ho sakta hai.
+
+Thread ka matlab hota hai ek "path" jisme ek kaam ho raha hota hai. Agar koi heavy task chal raha ho, toh baaki ka tasks wait karte hain.
+
+Lekin Event Loop ke through, Node.js asynchronous programming ka use karta hai jisme chote tasks (like reading files or making API requests) background mein chalte rehte hain aur main thread pe zyada load nahi padta.
+
+********************************
+
+3. V8 vs Libuv:
+V8 Engine: Ye Google ka open-source engine hai jo JavaScript code ko execute karta hai. V8 JavaScript code ko machine code mein convert karta hai taake wo faster execute ho sake. Aapne jo JavaScript likha hai, usse V8 engine samajhta hai aur usse execute karta hai.
+
+Libuv: Ye ek library hai jo asynchronous tasks ko handle karti hai, jaise file reading, network requests, etc. Libuv platform-independent hai, matlab wo different platforms (Windows, Mac, Linux) pe kaam kar sakti hai.
+
+Libuv ki madad se, Node.js async operations ko efficiently handle karta hai.
+
+********************************
+4. Node Runtime:
+Node.js runtime wo environment hai jahan pe Node.js ka code run hota hai. Jab aap Node.js install karte hain, toh aapko V8 engine aur libuv ke saath ek runtime milta hai, jo asynchronous operations ko handle karta hai.
+
+Ye runtime JavaScript ko server-side pe execute karne ka platform provide karta hai. Normally, JavaScript browser me run hota hai, lekin Node.js se aap usse server-side pe bhi run kar sakte hain
+
+********************************
+. Event Loop:
+Event Loop ka kaam hai ki wo asynchronous tasks ko handle kare jab main thread free ho.
+
+Event Loop continuously check karta hai ki koi asynchronous task complete hua hai ya nahi. Agar haan, toh wo task ko execute karta hai, aur agar nahi, toh wo wait karta hai.
+
+Event Loop ki wajah se, Node.js ek waqt me multiple tasks handle kar sakta hai bina kisi blocking ke.
+
+********************************
+ Blocking Code:
+Blocking code ka matlab hai ke ek task ko complete hone tak baaki tasks ruk jate hain.
+
+Agar aap file read karte ho ya koi data process karte ho synchronously, toh Node.js us task ko complete hone tak baaki tasks ko wait karata hai.
+
+Isme, jab ek task run ho raha hota hai, toh doosra task block ho jata hai jab tak pehla task complete nahi hota.
+
+
+********************************
