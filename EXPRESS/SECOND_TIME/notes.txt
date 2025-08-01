@@ -1,0 +1,38 @@
+INSTALLATION 
+npm i express
+npm i express --save
+npm i express --no-save (agr hmy perminant nhi krna tb ye use krengy )
+
+npm i body-parser --save
+
+////////////////////////////////////
+middleware*****
+ismy 3 chizen htin hen
+request
+response
+next
+
+ismy hm chack krty hen ke user athanticate he ya nhi or bhi restruction 
+
+JIS MIDDLE WERE KO phky hm likhengy wo phly check hoga jisko bad me wo bad me check hoga
+
+  next();
+  // ye isi liye call krty hentaky wo next meddleware ko call kry
+
+  res.send(hjdhjfhjf)******
+  ismy hm response bhejty hen jobhejna ho r ye last waly middlewere pr hi chlyga lazim osy phly waly or chalogy to wo next pr jayga nhi khyga ke 2 bar respone nhi bhej skty 
+
+  app.use////////
+  hm app.get wagera ki jga use sy bhi kamkr skty hen ismy hm jo url dengy wo os pr chlyga middlewere lekin agr hm ismy / dety hen to wo sb pr hi chal jata he bhly url ho /,/abc ,/def
+
+////////////////////////////////////
+HTML KI FILES VIEW KE FOLDER ME BNTI HEN 
+PATH HM UTILS ME RAKHTY HEN
+functionality or url hm routes me rakhty hen 
+
+////////////////////////////////////
+hm .send sy broswer pr data send krty hen lekin agr html ki files alg hen import krky lary hn to sendFiles ke name sy bhejty hen
+////////////////////////////////////
+
+express.urlencoded() allow karta hai ke Express tumhari form (POST) body ko samajh kar 
+req.body ke through access kar sake. Yeh middleware zaroori hota hai agar tum form data handle kar rahe ho in Express.
