@@ -36,3 +36,18 @@ hm .send sy broswer pr data send krty hen lekin agr html ki files alg hen import
 
 express.urlencoded() allow karta hai ke Express tumhari form (POST) body ko samajh kar 
 req.body ke through access kar sake. Yeh middleware zaroori hota hai agar tum form data handle kar rahe ho in Express.
+
+////////////////////////////////////
+app.use(express.static(path.join(getPath, 'public')));
+
+hmy ye ye krna orhta he kisi bhi file ko publicaly use krny ke liye hm public folder me hi css filew krengy or osko is code sy public bnay gy osky bad html me ink krengy wrna wo nhi hoga link bina public kiye
+
+////////////////////////////////////
+ejs mean template engine hai jo html ko dynamic banata hai
+yani html + javascript=ejs
+
+npm i --save ejs
+
+express ke sath use krty waqt hmy ye likhna lazmi hen
+app.set('view engine', 'ejs');
+app yani express ka instance 

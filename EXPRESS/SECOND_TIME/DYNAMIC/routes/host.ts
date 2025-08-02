@@ -15,9 +15,15 @@ hostRouter.get("/contact",((req, res, next) => {
     );
 }));
 
+const names=[]
 
 hostRouter.post("/contact",((req, res, next) => {
   console.log(req.body.homename);
+
+  names.push(req.body.homename)
+
   res.sendFile(path.join(getPath,'views','succes.html'));
 }));
 export default hostRouter;
+
+export {names}

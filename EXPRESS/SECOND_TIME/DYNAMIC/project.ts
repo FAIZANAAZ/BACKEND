@@ -7,7 +7,11 @@ import path from "path";
 const app = express();
 
 
+app.set('view engine', 'ejs');
+app.set('views',"views");
+// ye hmny btaya he ke hmari html ki files views ke folder me hen kioky hm ejs ko html ki hi files me as a engine use krty hen 
 
+////////////////////////////////////
 
 
 app.use(express.urlencoded());
