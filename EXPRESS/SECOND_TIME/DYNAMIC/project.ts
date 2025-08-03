@@ -3,6 +3,7 @@ import userRouter from './routes/user.js';
 import hostRouter from './routes/host.js';
 import getPath from "./utils/path.util.js";
 import path from "path";
+import homeRouter from './routes/home.js';
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(express.urlencoded());
 
 app.use(userRouter);
 app.use(hostRouter);
+app.use(homeRouter)
 // use ka isi liye use krty hen tsky wo sbpr applay ho hr rout pr 
 // middleware
 

@@ -15,15 +15,16 @@ hostRouter.get("/contact",((req, res, next) => {
     );
 }));
 
-const names=[]
+export const names:any=[]
 
 hostRouter.post("/contact",((req, res, next) => {
-  console.log(req.body.homename);
+  // console.log(req.body);
 
-  names.push(req.body.homename)
+  names.push({homename:req.body.homename})
 
+
+  
   res.sendFile(path.join(getPath,'views','succes.html'));
 }));
 export default hostRouter;
 
-export {names}

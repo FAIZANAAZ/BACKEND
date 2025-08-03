@@ -51,3 +51,13 @@ npm i --save ejs
 express ke sath use krty waqt hmy ye likhna lazmi hen
 app.set('view engine', 'ejs');
 app yani express ka instance 
+
+////////////////////////////////////
+// jb ejs ki file ko bhejty hen to render ka use krty hen send ki jga 
+
+////////////////////////////////////
+
+hmy jo html ka code same ho 2  3 files me hm osko ak partial ka folder bna kr osmy file bna kr ejs ki dal dengy or phir osko jha use krna ho osko esy use krlengy 
+
+  <%-  include('partials/header') %>
+url dedengy 
