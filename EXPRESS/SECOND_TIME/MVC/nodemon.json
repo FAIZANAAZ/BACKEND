@@ -1,0 +1,10 @@
+{
+  "watch":["."],
+  "ext":"ts,js,ejs,json",
+  "ignore":[
+    "**/node_modules/**",
+    "txt/"
+  ],
+  "exec":"node project.js"
+
+}

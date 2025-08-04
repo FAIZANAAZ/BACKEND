@@ -28,7 +28,10 @@ JIS MIDDLE WERE KO phky hm likhengy wo phly check hoga jisko bad me wo bad me ch
 ////////////////////////////////////
 HTML KI FILES VIEW KE FOLDER ME BNTI HEN 
 PATH HM UTILS ME RAKHTY HEN
-functionality or url hm routes me rakhty hen 
+  url hm routes me rakhty hen 
+controlers me hm functionality ko rakhty hen 
+
+or esy variable jo ke stoarge ke liye hen jesy osmy koi chiz jama hori he or data base me jari he on variables ko hm models me rakh dety hen 
 
 ////////////////////////////////////
 hm .send sy broswer pr data send krty hen lekin agr html ki files alg hen import krky lary hn to sendFiles ke name sy bhejty hen
@@ -61,3 +64,23 @@ hmy jo html ka code same ho 2  3 files me hm osko ak partial ka folder bna kr os
 
   <%-  include('partials/header') %>
 url dedengy 
+
+///////////////////////////////
+nodemon.json
+hm is file me likhty hen ke server me chages hon to kon si file ko dkehna he or konsi ko ignore krna he 
+
+{
+  "watch":["."],
+  "ext":"ts,js,ejs,json",
+  "ignore":[
+    "**/node_modules/**",
+    "txt/"
+  ],
+  "exec":"node project.js"
+
+}
+
+
+////////////////////////////////
+fs ke module ke zariye hm ye kr skte hen ke kisi bhi file ko bna kr osmy functionality ke zariye reade write krwa skty hen 
+or path ke zariye os file ka name ety hen jismy rad write krwana he 
