@@ -1,0 +1,13 @@
+Cookies**
+
+hm JB logging ktry hen to ye check krny ke Liye ke user phly Sy logging to nhi he agr he to osko home page pr Le jao nhi he to osko login page pr Le jao lekin osmy msla ye hota he ke koi url ke zariye ja skta he home page pr 
+
+is msly ko solve hm krty hen cookies Sy cookies hm express Sy install krty hen or phir use krty hen cookies me ye hota he JB bhi koi user login kryga to oski ak cookies client pr Yani browser pr bn jaygi or JB bhi koi user dobara req kryga to req ke Sath cookies Jo oski bni thi wo bhi Sath jaygi client pr to wo check krlega ke is name ki cookies bni he ya nhi Yani user login he ya nhi agr koi url Sy jayga tb bhi  req jaygy or dekhygi ke is name ki to koi cookies hehi nhi to osko wapas login page pr redirect krdegi
+
+Session***
+
+ismy ye he ke JB hm cookies ka use krty hen osmy bhi ak msla hota he ke osmy cookies jakr store hoti he client me or wo encrypted bhi nhi Hoti to koi bhi hacker wagera client ke terminal me jakr cookies ko true kr skta he or logon kiye Bina os page pr ya admin page pr bhi a skta he 
+
+isky Liye hm use krty hen session ye bhi part he express J's ka hm install krty hen ismy wo encrypted hota he or wo server ki memory me jakr store hoga naky client me 
+
+ismy bhi ak msla ye he ke JB bhi hmari request jaygi to wo new Hoti he to seesions ko delete krdegi to har bar user ko dobara login krna pryga to hm session ke sath use krengy (connect_mongodb_session)ye mongo db me jakr store krdyga or har req pr wha Sy lekr a jayga
