@@ -34,3 +34,20 @@ Three types ke modules hoty hen
 
 3: third party(Yani kisi ne bna kr rakh diye osko install krky use krliya npm ,bun etc)
 hm Jo bhi chiz import ya required krky dosri chizon ko lekr aty hen ya khi Sy mngwaty hen module wo sb apny apny function wrapper me cover hoty hen JB hm mangwaty hen to wo fun chalta he or chak hota he ke osmy ye chiz he ya nhi he to lakr dedega nhi to error a jayga
+
+fffffffffffffffffffffffffffffffffffffffff
+events
+ismy ak hota he sunny Wala ak hota he bolny Wala 
+eventemitter.on('one')
+isy hm jistni bar listen krengy wo otni bar run hoga
+enventemitter.once("two")
+isko jitni bar bhi listen krlo ye ak hi bat run hoga 
+
+enventemitter.emit("one")
+isky zariye hm event ko chalaty hen
+
+eventmitter.removelistner("one")
+isy hm remove kr skty hen kisi event ko
+
+eventemitter.listner("one")
+ye btayga ke kitny listener one ke name Sy chal rhy hen hm ak name Sy multiple listener Chala skty hen
