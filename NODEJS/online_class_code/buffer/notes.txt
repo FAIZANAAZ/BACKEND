@@ -1,0 +1,4 @@
+buffer ak temporary memory he jha data save hota he -- or ismy data binary  form me save hota he to computer me foran Sy access ho jata he--ye ak khas kisam ka buffer he jisko hmy need nhi he import krwany ki ismy hm use kr skty hen esy hi--ismy hm text or picture wagera bhi dal skty hen 
+Unicode**
+ye bhi ak kisam ki memlri he jisy hm hexa code or demal code bhi kh skty hen 
+utf-8 or 16 hmary text ko as a memory store krta he  -- ismy bhi data binary me ata he
