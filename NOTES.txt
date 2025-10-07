@@ -51,3 +51,5 @@ isy hm remove kr skty hen kisi event ko
 
 eventemitter.listner("one")
 ye btayga ke kitny listener one ke name Sy chal rhy hen hm ak name Sy multiple listener Chala skty hen
+
+///////////////////////////////////////////////////

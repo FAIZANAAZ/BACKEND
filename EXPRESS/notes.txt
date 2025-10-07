@@ -1,0 +1,9 @@
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch index.js"
+  }
+
+  //watch likhny sy wo auto ubdate hota ryga
+
+  *******
+  MIT licence Jo pekig.jeson ki file me hota he oska matlb he wo public code he sbsy Liye or isc ka private
