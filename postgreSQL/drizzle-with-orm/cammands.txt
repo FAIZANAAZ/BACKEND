@@ -1,0 +1,10 @@
+https://orm.drizzle.team/docs/get-started/postgresql-new
+https://github.com/Sid-Taha/Docs/blob/main/Node.js/06_PostgreSQL.md  =notes
+
+docker compose up -d = "isy hm docker sy connect krengy 
+
+npx drizzle-kit push =isy hm end me oush krdengy
+
+npx drizzle-kit studio=isy hm table ko with ui dekh skengy wo ak link dega hmy
+
+

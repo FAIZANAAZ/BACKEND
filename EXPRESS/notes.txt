@@ -7,3 +7,39 @@
 
   *******
   MIT licence Jo pekig.jeson ki file me hota he oska matlb he wo public code he sbsy Liye or isc ka private
+
+  ****************************************
+
+
+
+
+  ********************************
+Chache***
+hmary server pr JB bhut zada client or user aty hen to server pr load pr br jata he or agr osmy bhi ak user bar bar ak hi url pr req kryga to ak hi user ki traf Sy same sever pr 5 bar req jaygi to load mazeed br jayga
+
+hm osko km krny ke Liye hm bich me chache dal dety hen cheche ye krta he ke jesy ak user aya osny phly button pr click Kiya button number 1 pr or wo req phly cheche me jaygi dekhygi ke phly Kiya is user be Jo click Kiya he oska data he to first time pr to nhi hoga to wo server pr bhej Dega or server Sy lakr apny Ander bhi save krlega or user ko bhi de Dega agr dobara kabhi wahi user aya or button 1 pr click Kiya to cheche me jaygi req or dekhygi hn ye data to he to wo osi ko Le ayga server or bar bar req ka load ni jayga 
+
+hm chahy to time bhi kha skty hen cheche me ke cheche me Jo data store hwoa he wo bs 10 days tk ho osky bad remove ho jay JB user ay to osko again kry req server pr
+
+cheche hmari temporary memory Hoti he 
+
+
+versions****
+hm JB api bnaty hen kisi service deny ke Liye to hm version ka use krty hen jesy agr technology new ATI he to hm apni service os hisab Sy convert kr dety hen lekin jisny hamri phly Wala code use Kiya hoga oska to code kharab ho jayga isi Liye hm phly waly ko bhi kharab nhi krty blky ak api blkl alag Sy or bna kr rakh dety hen or version alg kr dety hen jesy 
+porani wlaa Kam ka end point ESA hoga (localhost 3333/naaz/v1/product)
+JB bhi koi ye wali api ka data use kryga url use kryga to osko hmehsa wahi content mily ga 
+(localhost 3333/naaz/v2/product)
+ak new v2 ke name Sy bnadi agr koi ye use krna chahy to wo krly ye use 
+
+isi ko khty hen version
+
+**********************************
+rate limit****
+ye hackers ke DDos attack Sy bachny ke Liye he jesy hackers Kiya krta he hamry button pr bar bar click krky req send krta he bar bar bar bar jisy hmara server or cheche pr load ho jata he or wo crash kr jata he 
+isy bachny ke Liye hm use krty hen rate limit middlewere ke Ander Jo ke npm ka ak Peking he osmy hm define krty hen ke ak user ak mint me kitni bar req kr skta he jesy hmny likha 1 mint me 3 time limit to koi user aya wo 3 bar click kryga 4 bar kryga to fail ho jaygi jaygi hi nhi req or message de skty hen hm ke cross limi osky bad next mint me again wo kr skta he 3 bar click 
+
+***************
+pagination****
+ye hm user experience ke Liye user krty hen pagination lga kr hm products ko ak waqt me chunks ki trha mngwaty hen jesy product page pr gya client or os page pr agr 100 products hen to wo load hony me time lgyga jisy user experience kharab ho jayga isi Liye hm slice krdengy or ak waqt me 100 ki jga 20 ya 30 kitny bhi dikhadengy or baqi dosry button pr click krny pr dikha dengy km data km load lega
+
+***************
