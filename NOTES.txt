@@ -53,3 +53,11 @@ eventemitter.listner("one")
 ye btayga ke kitny listener one ke name Sy chal rhy hen hm ak name Sy multiple listener Chala skty hen
 
 ///////////////////////////////////////////////////
+orm***
+hmary pas different languages Hoti hen jesy SQL ,non squal jiski apni apni languages Hoti hen hm orm ki madad Sy har language ko handle kr skty hen hm agr koi chiz likhengy object me or wo language table accept krta Hoti orm osko table me convert krdega or wapas table me lakr osko object me wapas bhi ans krdega 
+ismy hm prashama ya drizzle ka use krty hen
+
+drizzle***
+drizzle 2 trha ke hoty hen
+drizzle orm : joke data ko accept or send krta he database me Sy
+drizzle-kit : ye posgras ko khta he UI kreact kro table me taky me dekh skon table ko
