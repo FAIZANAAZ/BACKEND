@@ -47,9 +47,6 @@ exports.CreateBookData = async (req, res) => {
   try {
     const { title, description, authorId } = req.body;
 
-    if (!title || !description || !authorId) {
-      return res.status(400).json({ message: 'All fields are required' });
-    }
 
     // check if author exists
     const authorExists = await db
