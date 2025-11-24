@@ -1,0 +1,12 @@
+npm init -y
+npm i express
+npm i @types/express @types/node -D
+
+
+RUNNINY CAMMANDS/////////****
+docker compose up -d
+npm i -D drizzle-kit
+npx drizzle-kit studio
+
+//follow docs for posgras db connect
+https://github.com/Sid-Taha/Docs/blob/main/Node.js/06_PostgreSQL.md

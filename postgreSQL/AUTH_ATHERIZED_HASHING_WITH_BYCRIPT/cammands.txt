@@ -1,0 +1,17 @@
+npm init -y
+npm i express
+npm i @types/express @types/node -D
+npm i -D drizzle-kit
+
+RUNNINY CAMMANDS/////////****
+docker compose up -d //for docker databse
+npx drizzle-kit studio//for ui db
+node --watch index . //for node 
+
+//follow docs for posgras db connect
+https://github.com/Sid-Taha/Docs/blob/main/Node.js/06_PostgreSQL.md
+
+/auth hashing
+npm i bcrypt 
+
+npm i cookie-parser
