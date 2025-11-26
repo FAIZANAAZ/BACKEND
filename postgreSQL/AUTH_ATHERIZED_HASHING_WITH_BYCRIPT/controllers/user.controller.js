@@ -6,7 +6,8 @@ const bcrypt=require('bcrypt')
 
 
 exports.signupFunction = async(req, res) => {
-  const {username,email,password}=req.body
+  try{
+    const {username,email,password}=req.body
 // in database find email 
   const [existingUser]=await db.select().from(userTable).where(eq(userTable.email,email))
 
@@ -29,6 +30,10 @@ const passwordHash =await bcrypt.hash(password,10)
   }).returning({data:userTable.id})
   // pora usertable agr creaye howa to a jayga 
   return res.status(201).json({message:"user created",status:true,data:result})
+  }catch(error){
+    console.error("Error during signup:", error);
+    return res.status(500).json({error:"Internal server error"})
+  }
 }
 
 
@@ -37,7 +42,8 @@ const passwordHash =await bcrypt.hash(password,10)
 //************************************ */ login function
 
 exports.loginFunction=async(req,res)=>{
-const {email,password}=req.body
+  try{
+    const {email,password}=req.body
 
 const [existingUser]=await db.select().from(userTable).where(eq(userTable.email,email))
 
@@ -56,8 +62,8 @@ if(!is_valid_password){
 
 // expire session
 const expireAt=new Date(); // 1 hour in milliseconds
-// expireAt.setDate(expireAt.getDate() + 7);
-expireAt.setSeconds(expireAt.getSeconds() + 5);
+expireAt.setDate(expireAt.getDate() + 7);
+// expireAt.setSeconds(expireAt.getSeconds() + 5);
 // ismy hm ye khry hen ke expireAt ke variable me current date aygi jb user logi kryga or session create hoga hmny kha .getdate() sy hmny kha ke is time me 7 days add krdo to ab
 // 
 
@@ -81,12 +87,18 @@ expireAt.setSeconds(expireAt.getSeconds() + 5);
   })
 
   return res.status(200).json({message:"login successfully",status:true,data:session})
+  }catch(error){
+    console.error("Error during login:", error);
+    return res.status(500).json({error:"Internal server error"})
   }
+  }
+  
 
 
 exports.homeFunction=async(req,res)=>{
 
-  const userData=req.user
+ try {
+   const userData=req.user
 
   if(userData){
     // all information from userdata (combine table information)
@@ -94,4 +106,25 @@ exports.homeFunction=async(req,res)=>{
   }else{
     return res.status(401).json({message:"you are not logged in",status:false})
   }
+ } catch (error) {
+  console.error("Error in home function:", error);
+  return res.status(500).json({error:"Internal server error"})
+ }
   }
+
+// logout function
+  exports.logoutFunction=async(req,res)=>{
+    try {
+      const sessionId=req.cookies.session_id;
+
+      if(sessionId){
+        await db.update(SessionTable).set({isActive:false}).where(eq(SessionTable.id,sessionId))
+      }
+      res.clearCookie('session_id')
+      return res.status(200).json({message:"logout successfully",status:true})
+    } catch (error) {
+      console.error("Error in logout function:", error);
+      return res.status(500).json({error:"Internal server error"})
+    }
+    }
+  

@@ -1,4 +1,4 @@
-const {pgTable,uuid,varchar,text,timestamp} = require('drizzle-orm/pg-core');
+const {pgTable,uuid,varchar,text,timestamp,boolean} = require('drizzle-orm/pg-core');
 
 
 exports.userTable=pgTable('users', {
@@ -16,5 +16,6 @@ exports.SessionTable=pgTable('users_session', {
   user_id:uuid().references(()=> exports.userTable.id).notNull(),
   createdAt:timestamp().defaultNow().notNull(),
   expireAt:timestamp().notNull(),
+  isActive:boolean().default(true).notNull()
   
 })

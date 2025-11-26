@@ -28,11 +28,21 @@ if (!data){
   return res.status(401).json({error:" session expired please login again "})
 }
 
+if(!data.users_session.isActive){
+
+   res.clearCookie('session_id') // cookie clear krdo
+  return res.status(401).json({error:" session expired please login again "})
+  
+}
+
 if(new Date() > new Date(data.users_session.expireAt)){
   // agr abhi ki date sy badi ho gyi to session expire ho gya
   res.clearCookie('session_id') // cookie clear krdo
   return res.status(401).json({error:" session expired please login again "})
 }
+
+
+
 
  req.user=data
 
