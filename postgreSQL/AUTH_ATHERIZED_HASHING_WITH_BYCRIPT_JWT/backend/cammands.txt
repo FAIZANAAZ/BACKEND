@@ -1,0 +1,25 @@
+npm init -y
+npm i express
+npm i @types/express @types/node -D
+npm i -D drizzle-kit
+
+//JB BHI schema me koch update kreng ye cammand run hogi
+npx drizzle-kit push
+
+RUNNINY CAMMANDS/////////****
+docker compose up -d //for docker databse
+npx drizzle-kit studio//for ui db
+node --watch index . //for node 
+
+//follow docs for posgras db connect
+https://github.com/Sid-Taha/Docs/blob/main/Node.js/06_PostgreSQL.md
+
+/auth hashing
+npm i bcrypt 
+
+npm i cookie-parser
+npm i zod
+npm i express-rate-limit
+npm i helmet
+npm i cors
+>npm i jsonwebtoken

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a1032; /* A deep purple background */
+  color: #f0f0f0; /* A light color for text for good contrast */
+  font-family: sans-serif;
+}

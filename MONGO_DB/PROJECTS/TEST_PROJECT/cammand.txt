@@ -1,0 +1,4 @@
+npm i @types/node @types/express
+npm i express
+npm i mongoose
+npm i dotenv
