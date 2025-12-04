@@ -1,6 +1,7 @@
 const express = require('express');
 const { connectDB } = require('./db/connection');
 const userRoutes = require('./routes/user.routes');
+const cookieParser = require('cookie-parser');
 
 require('dotenv').config();
 
@@ -14,6 +15,8 @@ connectDB(process.env.MongoDB_URL).then(()=>{
 // hmny yha run kiya he connection ke function ko taky jb ye file chly to w bhi run ho jay 
 
 app.use(express.json());
+
+app.use(cookieParser());
 
 app.use('/user', userRoutes);
 
