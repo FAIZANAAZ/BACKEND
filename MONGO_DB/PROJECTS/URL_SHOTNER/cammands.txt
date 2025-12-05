@@ -1,0 +1,17 @@
+npm init -y
+npm i @types/node @types/express -D
+npm i express
+npm install drizzle-orm@latest
+npm install -D drizzle-kit@latest
+npm install pg
+npm i bcrypt
+npm i jsonwebtoken
+npm i cookie-parser
+
+ISY HM short url bnaty he*********
+npm i nanoid@3
+
+npx drizzle-kit push
+docker compose up -d
+npx drizzle-kit studio
+node --watch server.js
