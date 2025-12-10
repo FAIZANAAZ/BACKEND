@@ -1,0 +1,44 @@
+npm init -y
+npm i @types/node @types/express
+npm i express
+
+docker hub me deployed krny ke liye sbsy phly dockerfile me code likhengy sb chizen jo jo initial krni he ot dosra bnda use krly
+
+node ya kisi chiz ki agr image lani he yani agr hm node ppr hi kam krty hen to node ka version konsa he oski image likhni hoti he wo hm docker hub ki web pr jakr serch krky node to nichy a jayga wha sy opy krky hm lgaty hen dockerfile me 
+
+#image build krengy chack krny ke liye ke chlri he ya nhi  *****
+docker build -t faiza-first-image .
+
+chack krengy bni image ya nhi *******
+docker images
+name likha a jayga wahi 
+
+
+# hmny kha ke container hmary port 8000 ko container ke 8000 port ko map kro taky hmara port joky phly wala he 8000 wo koi or jb use kry to is port pr kry 
+docker run -p 8000:8000 -it faiza-first-image
+
+# phir http://localhost:8000/test 
+is url pr broswer me jo hmny likh kr bheja he server.js me wo a jayga 
+
+docker run -p 8000:8000 -itd faiza-first-image
+
+# agr code me changing krengy or dekhna chahty hen to dobara rebuild krna prugi image delet krky 
+#isi liye hm jb bhi again bnay gy to name me version add krdengy jesy 
+
+docker build -t faiza-first-image-v1 .
+
+#ab debply krengy 
+1// signup in 
+2// signup with google
+3// dp pr clcik krengy or my profile pr jaygy
+4//my hub
+5// create repositry
+6//name description ---public ya private--- create 
+7//jo name bna ayga osko copy krengy or os name sy image build krengy (docker build -t (name ) .)
+8// run (docker login) # taky wo connect ho jay web sy
+9// run     docker push faizanaaz/my-first-repo
+10// web ko refresh krengy to bn kr a jaygi wha repo
+
+#phly delet krengy image docker sy phir yr chlaygy agr ye waqi  docker hub pr public he to wo wha sy otha kr khod sy bna dega bina hmary build liye sirf run cammand sy wrna jb hmny bnai na ho or run krty hen to wo run nhi pata banani lazim he 
+10//run     docker run -p 8000:8000 faizanaaz/my-first-repo 
+11//chack in docker ke image bni khod ya nhi 
