@@ -1,0 +1,82 @@
+
+network bnany ki cammand*****
+docker network create network_1 # ak id return hogi yani bn gya 
+docker network create network_1
+docker run -itd --network network_2 --name c1 busybox
+docker run -itd --network network_2 --name ca busybox # ye hmny network_1 me busybox ki image me ca ke name ka container bnaya he 
+
+
+lekin jitny container ak network ke Ander bny hen jesy network 1 me a b c name ke container hen 
+or network2 me d e f ke 
+
+to a b c apas me bat kr skty hen or d e f bhi lekin a d ya e c Sy bat nhi kr skta
+bat krny ke Liye same network pr run hona lazim he
+
+//////
+
+hn lekin hm ak cammand Sy kisi or network ke container ko connect krky osy bat krwa skty hen or phir disconnect bhi kr skty hen
+
+docker network connect network_2 c1
+isy network_2 me network 1 ka c1 container a jayga or hm inpect krky dekh bhi skty hen containers ki list 
+
+
+docker network connect network_1 ca
+ye bhi same dosry network ke liye
+
+
+////////
+
+
+docker network inspect network_1
+isy hm kisi bhi network ki list dekh skty hen ke osmy kitny containers hen or kiya kiya he 
+
+/////////////////////////////
+VOLUME************
+docker ke container ke ander koch files hoti hen hm koch docker ke container ki files me likhty hen agr container delete ho jay to wo data bhi lost ho jata he isi liye hm bnaty hen VOLUME
+volume ak file folder hota he jisko hm cainter ki file sy connect kr dty hen to hm jo bhi likhty hen container ki file me wo os volume ki file me bhi auto save 
+ho jata he iska faida ye hota he agr container delete ho bhi jay to volume ki file nhi hoti ot data lost nhi hota or again hm container bna kr use volume ki 
+file ko connect kr dety hen to osi data ke sath again chal jata he volume 
+host volume=========
+ak hota he host volume jismy laptop ke ander bnta he folder ya file
+custom volume======
+ismy file ya folder bnta he docker desktop ke ander he
+
+
+
+
+////////make volume ////////////
+host volume ******
+docker run -it -v D:\BACKEND_DEVELOPMENT\DOCKER\my_volume_data:/home/data_container --name faiza_container busybox
+
+//iska matlb he docker run kro or hmary laptop me is location ki file he : osko connect krdo docker ke ander busybox ki image me faiza_container he
+osmy home ki file me data_container ke folder sy 
+jo container ya folder nhi milyga docker me osko wo khod bna dyga bs image lazim hona chiye 
+phir hm jo bhi data_container me likhengy wo khod save hota jayga hmary laptop waly folder me or jo laptop waly folder me likhengy wo khod save hota jayga 
+data_container me 
+
+custome volume *****
+docker volume create faiza_docker_volume
+phly isy hm docker ke ander ak volume create krengy jo docker me show bhi hoga volume ke section me 
+docker run -it -v faiza_docker_volume:/home/data_container --name faiza_container busybox
+same wahi bs is bar hm bs volume ka name dengy baqi sb wesy hi 
+
+/////see files//////
+docker me kisi image ke container me jakr hm files me jakr sari files dekh skty hen home or jo hm bnary hen home ke ander
+
+////list //////
+kisi bhi container me akr hm likhengy (ls)to osmy jitni files hen sb show ho jaygi 
+phir onmy sy kisi bhi file ka name likhengy (cd filename ) to os file me chly jaygy phir ls krengy to osky ander ki chizen ajaygi 
+
+//////////////////////
+/////IMAGES/////
+docker run -td busybox 
+busybox ke name sy image bn jaygi ye image bnany ki caamand he 
+
+//////////////////////////////
+Docker Compose yml **
+ye file pekig.jeson ki trha Hoti he jesy koi bhi hmari GitHub Sy repo pull kryga to (docker Compose up -d )wo run kryga to is file me Jo bhi likha hoga image container wo auto run ho jaygy docker desktop me
+ye hm isi kiye bnaty hen taky koi agr pull kry to wo cammands chalany me ghlti kr skta he isi Liye hm Jo image, container , valium, network,port , environments etc Kam krty jaygy osko is file me bhi likhty jaygy taky kisi or or run na krna pry manually bs ak cammand Chala kr Kam ho jay 
+
+docker Compose me agr hm network nhi likhty to wo by default bridge pr chlta he or network ka name Jo hm main project ka name oper dety hen osi name Sy bn jata he bs Sath default add ho jata he jesy 
+project-name : abc
+network: abc_default

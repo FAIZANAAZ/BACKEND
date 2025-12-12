@@ -1,0 +1,15 @@
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+//ye cammand he cli pr chalany ki yani laptop pr connect krny ki aws ko
+
+aws --version
+//isy dekhengy ke install howa ya nhi 
+
+aws configure
+//isy hmy jo id bnai thi aws ki web pr osko lakr ismy lgaty hen jb ye cammands to wo pochta he id or secrete id ka wo dalty hen
+
+//////////////////
+npm init -y
+npm i express
+
+for image build*******
+docker build -t myimage .

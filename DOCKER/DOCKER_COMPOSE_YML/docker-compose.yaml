@@ -1,0 +1,37 @@
+name: my-project  
+
+# ye project ka man name he 
+# containers bhi isi name sy bnyga main osky ander baqi containers bnygy jis name sy hm bnaygy 
+
+# ye bahis ak object he jisky ander sb bnyga services:
+
+services:
+
+# bb hmny object ka name rkha he jo hm koch bhi rakh skty hen 
+# osky ander hmny btaya ke busybox image lao or osky ander container bnao my-busybox name sy  networks bnaya he custom  ke is name ke network pr run kro or is volume sy connect kro
+
+  bb:                      
+    image: busybox          
+    container_name: my-busybox
+    networks:
+      - my_new_network
+    volumes:
+      - my_data_volume
+
+  ub:
+    image: ubuntu
+    container_name: my-ubuntu
+    networks:
+      - my_new_network
+    volumes:
+      - my_data_volume
+
+networks:
+  my_new_network:
+    driver: bridge          
+
+volumes:
+  my_data_volume: D:\BACKEND_DEVELOPMENT\DOCKER\my_volume_data:/home/data_container    
+
+
+# abhi hmny ak hi volume or network bnaya he or dono image ko diya he hm alag alg name sy bhi bna skty hen or alg alg bhi pas kr skty hen 

@@ -1,0 +1,8 @@
+Connect with aws
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+//ye cammand he cli pr chalany ki yani laptop pr connect krny ki aws ko
+//isy intallation ho jaygi phir next next krky install krlengy 
+
+
+CURL*********
+hmary pas ak hota he curl jo ke har 10 sec ya jitny set krty hen otny second bad ye chack krta he ke container crash to nhi howa 
