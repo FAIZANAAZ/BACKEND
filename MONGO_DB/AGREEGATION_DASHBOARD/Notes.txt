@@ -1,0 +1,22 @@
+https://github.com/Sid-Taha/Docs/blob/main/Node.js/08_MongoDb_aggregation.md
+
+hmy dashboard bnany ke liye total value ya total users phir osmy sy top users ya 
+jo log zada purchase krty hen wo ya products me ke konsa zada biqra he ya kisky price 200 sy zada ya km ye sb dikhany ke liye filters map matching krna hota he hm isko easy krny ke liye agreegation ka use krty hen jo ke mongodb walon ne bnay hen koch bny bnay functions taky h,ary liye easy ho jay kam krna 
+
+
+
+//add random data////////***********
+hm rendom data bhi dal skty hen zada ak Sath mongodb atlas me 
+application install krengy bs code me( mongodb for bs code)
+or connect pr click krky connection string dengu wo connect ho jayga phir side me os name Sy data base or osky Ander collection a jayga osi name Sy Jo hmny database me bnaya he 
+collection pr right click krky hm selecect krengy (insert documents)ko or osmy insertone ko hta kr insert money krengy or Sara data daldengy array ki surat me phir play ke button pr click krengy to wha data phonch jayga
+
+
+
+
+Cammands//////***********************
+npm init -y
+npm i @types/node @types/express
+npm i express
+npm i mongoose
+npm i dotenv
