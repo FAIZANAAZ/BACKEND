@@ -1,0 +1,18 @@
+git init
+isy hm initialize krty hen taky connection bn jay project ka GitHub Sy
+
+
+git add .
+isy hm sari chizon ko bhejty hen GitHub pr
+
+git commit -m "dd"
+isy hm commit add krty hen ke kis chiz ka update Kiya he 
+
+git status
+isy hm status chack krty hen ke konsi file Gai he konsi nhi ye sb dikha deta he 
+
+git log --oneline
+isy hm pichy jaty hen Yani agr 2 time add . Kiya he to JB 1 Wala Kiya tha wo ajayga or 2 wlaa mit jayga Yani agr koi mistake ho jay to dekhengy pichy jakr (lekin hm ismy Sirf read krty he. isko pichy jakr update nhi krengy)
+
+git checkout master
+or phir pichy waly agy agy any ke Liye ye use krty hen

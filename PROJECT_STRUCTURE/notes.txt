@@ -1,0 +1,61 @@
+npm init 
+for (package.json)
+
+npm i 
+(for package-lock.json & node module)
+
+npm i dotenv
+(for env)
+
+npm i express 
+npm i @types/express @types/node -D
+
+/*************************************
+https://github.com/Sid-Taha/Docs/blob/main/prettier.md
+prettier*********
+prettier hm formating ke liye use krty hen kioky har bndy ka likhny ka apna style hota he koi agr hmary project me kam kryga to wo apni tariky sy kryga jesy tab ka space dekr or hm 1 ka dety hen wo semi colom lgata he hm nhi lgaty isy code acha nhi dikhta isi liye hm prettier ka use krty hen or osmy rules btadety hen phir prettier formating ko auto handle krta he agr koi ak tab daly lekin hmny 2 likha he prettier ki file me to wo khod sy 2 kr dega 
+
+npm install --save-dev --save-exact prettier
+for (prettier) install
+
+.prettierignore
+ye hm isi liye bnaty hen taky ismy node module or env ki files rakhen kioky hm isko formate nhi krna chahty ismy bhut sari files hoti hen 
+
+or hmy isko apply krny ke Liye sbsy phly extension install krni Hogi  (prittier Code formater) ki phir (Ctrl + Shift + P)bhi likhna hoga  (Format Document With ) (lekin yad rhy file txt ki nhi ho open js ki ho ) prittier select krna hoga 
+
+phir (Ctrl ,  )setting open hogi search (format on save) sbsy open formate on save waly pr check tik krengy 
+nichy box me file likha hona chiye phr seting ko band krdengy or is br again formate kharab krky
+right click sy hm formate ducument with krky priterier krengy ak box ayga configure ka ospr click krengy bs ab jb bhi kam ho jay (ctrl s) krengy ho jyga formate 
+
+///*******************************************
+
+
+
+makes folders in src ****
+Public/images (for images locally rakhny ke liye) ye src sy bahir bnyga root file me
+
+db (connection bnanay ke liye)
+
+controllers (functions bnanay ke Liye logic lgany ke Liye )
+
+middleware (for auth)
+
+routes (for api endpoints)
+
+index.js (for main fike)
+
+service (ye db Sy hm Jo function mngwaty hen or wo bar bar use krty hen wo)
+
+utils(ye os code ke Liye Jo bar bar use hora hota he )
+
+models ()
+
+validator (for zod schemas)
+
+postman***
+postman me bhi hm collection bna kr name Sy rakh rakh kr hm save krengy or use krty rhengy
+
+
+
+.env.example ********
+ye file hm isi liye bnaty hen taky ye githup pr jaygi or agr koi clone kryga to wo same name rakh sky env variable ka hm ismy variable ka name rakh dety hen or ye bhi pta lg jayga ke kitny variables use hwy hen project me 

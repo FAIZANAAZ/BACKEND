@@ -1,4 +1,5 @@
 msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+>msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 //ye cammand he cli pr chalany ki yani laptop pr connect krny ki aws ko
 
 aws --version
