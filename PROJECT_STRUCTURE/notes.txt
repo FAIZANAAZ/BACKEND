@@ -10,6 +10,13 @@ npm i dotenv
 npm i express 
 npm i @types/express @types/node -D
 
+npm i cors
+//ye isi liye ye hr jga sy req ko any sy rokta he siway os url ke jo hm osy env me allow krty hen
+
+npm i mongoose
+
+
+
 /*************************************
 https://github.com/Sid-Taha/Docs/blob/main/prettier.md
 prettier*********
