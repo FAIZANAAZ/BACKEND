@@ -15,8 +15,10 @@ npm i cors
 
 npm i mongoose
 
+npm i bcrypt
+(for hashing passward)
 
-
+npm i jsonwebtoken
 /*************************************
 https://github.com/Sid-Taha/Docs/blob/main/prettier.md
 prettier*********
