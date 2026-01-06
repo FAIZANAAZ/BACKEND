@@ -1,0 +1,51 @@
+D:\BACKEND_DEVELOPMENT>git push
+Enumerating objects: 2282, done. 
+Counting objects: 100% (2282/2282), done.
+Delta compression using up to 4 threads  
+Compressing objects: 100% (2075/2075), done.
+Writing objects: 100% (2271/2271), 133.17 MiB | 1.20 MiB/s, done.    
+Total 2271 (delta 237), reused 958 (delta 93), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (237/237), completed with 5 local objects.
+remote: error: Trace: c9cc7d21b4e072bc304ffbd98a9656ef9ab8277927eb657ebb817a2aa3661e73
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File AWS deployment part1.zip is 127.34 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/FAIZANAAZ/BACKEND.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/FAIZANAAZ/BACKEND.git'
+
+git rm --cached "AWS deployment part1.zip" && git commit -m "Remove large file exceeding GitHub size limit" && git push
+fatal: pathspec 'AWS deployment part1.zip' did not match any files
+
+D:\BACKEND_DEVELOPMENT>git rm --cached "AWS deployment part1.zip" && git commit -m "Remove large file exceeding GitHub size limit" && git push
+fatal: pathspec 'AWS deployment part1.zip' did not match any files
+
+D:\BACKEND_DEVELOPMENT>git filter-branch --force --index-filter "git rm --cached --ignore-unmatch 'AWS deployment part1.zip'" --prune-empty --tag-name-filter cat -- --all && git push origin --force --all
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+         rewrites.  Hit Ctrl-C before proceeding to abort, then use an     
+         alternative filtering tool such as 'git filter-repo'
+         (https://github.com/newren/git-filter-repo/) instead.  See the
+         filter-branch manual page for more details; to squelch this warning,
+         set FILTER_BRANCH_SQUELCH_WARNING=1.
+Proceeding with filter-branch...
+
+Rewrite 2502a96cf703018dfaea238de12daaa2f5a9311d (41/44) (29 seconds passed, remaining 2 predicted)    rm 'AWS deployment part1.zip'
+Rewrite 939a1f009867991d5c1f0a61c6f44f7927de2787 (43/44) (31 seconds passed, remaining 0 predicted)    
+Ref 'refs/heads/main' was rewritten
+WARNING: Ref 'refs/remotes/origin/main' is unchanged
+WARNING: Ref 'refs/remotes/origin/main' is unchanged
+Enumerating objects: 2281, done.
+Counting objects: 100% (2281/2281), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2074/2074), done.
+Writing objects: 100% (2270/2270), 5.80 MiB | 1.65 MiB/s, done.
+Total 2270 (delta 238), reused 958 (delta 93), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (238/238), completed with 5 local objects.
+To https://github.com/FAIZANAAZ/BACKEND.git
+   954f9a3..b25d144  main -> main
+
+D:\BACKEND_DEVELOPMENT>git [ush
+git: '[ush' is not a git command. See 'git --help'.
+
+The most similar command is
+        push

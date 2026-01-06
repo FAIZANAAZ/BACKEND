@@ -19,6 +19,25 @@ npm i bcrypt
 (for hashing passward)
 
 npm i jsonwebtoken
+
+
+npm i crypto
+(for random hash ganerate)
+
+Email Sending**************
+npm i mailgen(ye content bnany ke liye jesy ui)(https://www.npmjs.com/package/mailgen)
+npm install nodemailer(ye email send krny ke liye )
+ismy hmy koch scret variables chiye hotyhen jo hm rakhty hen env file  me or hmy ye milty hen (https://mailtrap.io/)
+open (https://mailtrap.io/)
+singnin
+(continue with google )
+(faiza ,education,student,ai)continue
+select Emailsenbox =>continue
+clcik on sidebar (sandbox)
+clcik my senbox
+copy variable and past in env file
+
+
 /*************************************
 https://github.com/Sid-Taha/Docs/blob/main/prettier.md
 prettier*********

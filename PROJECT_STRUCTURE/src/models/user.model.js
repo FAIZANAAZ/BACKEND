@@ -1,6 +1,7 @@
 import mongoose , { Schema } from 'mongoose';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import crypto from 'crypto';
 
 const userSchema = new Schema({
   avatar: {
@@ -114,6 +115,37 @@ userSchema.methods.generateRefreshToken=function(){
 // ye hm krwaty hen store database me or wahs Sy compare krwaty hen
 
 //************************** */
+// crypto for random string generate
+
+// 1️⃣ User → Forgot Password click karta hai
+// 2️⃣ Ye function → token banata hai
+// 3️⃣ Plain token → email me bhej diya
+// 4️⃣ Hashed token → database me save
+// 5️⃣ 20 minutes baad → token expire
+userSchema.methods.generateForgotPasswordToken=function(){
+  const un_hashedToken=crypto.randomBytes(20).toString("hex")
+
+  const hashedToken=crypto
+  .createHash("sha256")
+  .update(un_hashedToken)//
+  .digest("hex")
+
+// ➡️ Ye same token ko hash kar deta hai
+// ➡️ Database me hashed token save hota hai
+// ➡️ Security ke liye hota hai
+// ➡️ Agar database leak bhi ho jaye, original token safe rehta hai
+
+  const tokenEntry=Date.now()+20+60+1000//20 minutes from now
+// ➡️ Ye token ka expiry time set karta hai
+// ➡️ Matlab token sirf 20 minutes ke liye valid hoga
+// ➡️ Uske baad token automatically invalid
+
+  return {un_hashedToken,hashedToken,tokenEntry};
+
+  // ye isi liye bnaya he agr user passward bhul jay to oski email pr ye bheja jata he tak isky zariye hm varify kr sken user ko 
+
+  
+}
 const UserTable = mongoose.model('User',userSchema)
 ;
 export  {UserTable};
