@@ -1,13 +1,20 @@
 import Mailgen from "mailgen";
 import nodemailer from "nodemailer";
 
+
+// 👉 Jab user signup karta hai → verification email jati hai
+// 👉 Jab user forgot password karta hai → reset password email jati hai
+// 1️⃣ Mailgen → email ka design / template
+// 2️⃣ Nodemailer → email actually send karna
+// 3️⃣ SMTP (Mailtrap) → test email inbox (real user ko spam na ho)
+
 //Send email function*************************
 const sendEmail = async (options) => {
   const mailGenerator = new Mailgen({
     theme: "default",
     product: {
       name: "Project Management App",
-      link: process.env.CLIENT_URL,
+      link: "process.env.CLIENT_URL",
     },
   });
 //email in text formate 
@@ -26,13 +33,14 @@ const sendEmail = async (options) => {
     },
   });
 
+  
   //definig email options
   const mail={
     from: process.env.EMAIL_FROM,
     to: options.email,
     subject: options.subject,
     text: emailText,
-    html: emailHtml
+    html: emailBody
   }
   //send email
   try {
@@ -44,6 +52,7 @@ const sendEmail = async (options) => {
 
 
 //Email verification template mailgen content*************************
+// YE UI HE email sdy ki user ko jb wo signup kryga 
 const emailVerificationTemplate = (userName, verificationLink) => {
   return {
     body: {
@@ -64,6 +73,7 @@ const emailVerificationTemplate = (userName, verificationLink) => {
 };
 
 //Reset password template mailgen content*************************
+// ye ui he os email ki jo hm send krengy osy jb wo forget passward kryga 
 const forgetPasswordTemplate = (userName, PasswordResetLink) => {
   return {
     body: {
@@ -82,4 +92,4 @@ const forgetPasswordTemplate = (userName, PasswordResetLink) => {
   };
 };
 
-export { emailVerificationTemplate, forgetPasswordTemplate };
+export { emailVerificationTemplate, forgetPasswordTemplate , sendEmail};

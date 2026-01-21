@@ -24,6 +24,8 @@ npm i jsonwebtoken
 npm i crypto
 (for random hash ganerate)
 
+npm i bcryptjs
+
 Email Sending**************
 npm i mailgen(ye content bnany ke liye jesy ui)(https://www.npmjs.com/package/mailgen)
 npm install nodemailer(ye email send krny ke liye )
