@@ -3,6 +3,7 @@ import { asyncHandler } from "../utils/async.handler.js";
 import {ApiError} from "../utils/api-error.js";
 import {UserTable} from "../models/user.model.js";
 import {sendEmail,emailVerificationTemplate} from "../utils/mail.js";
+import crypto from "crypto";
 
 
 
@@ -110,8 +111,39 @@ const login=asyncHandler(async(req,res,next)=>{
 
 })
 
+// verify email controller
+const verifyEmail=asyncHandler(async(req,res,next)=>{
+  // get verification token from request params/url
+  const {verificationToken}=req.params;
 
+  // if token is not provided
+  if(!verificationToken){
+    return new ApiError(400,"Verification token is missing")
+  }
 
+  // hash the received token to campare with the database
+  const hashedToken=crypto.createHash("sha256").update(verificationToken).digest("hex");
+
+  // find user with the hashed token and check if token is not expired
+  const user=await UserTable.findOne({
+    emailVerificationToken:hashedToken,
+    emailVerificationTokenExpiryDate:{$gt:Date.now()}
+  });
+  // if user not found
+  if(!user){
+    return next(new ApiError(400,"Invalid or expired verification token"));
+  }
+
+  // update user's email verification status
+  user.isEmailVerified=true;
+  user.emailVerificationToken=undefined;
+  user.emailVerificationTokenExpiryDate=undefined;
+  // save user
+  await user.save({validateBeforeSave:false});
+
+  return res.status(200).json(
+    new ApiResponse(200,null,"Email verified successfully"));
+})
   
 
-export {registerUser,login};
+export {registerUser,login,verifyEmail};
