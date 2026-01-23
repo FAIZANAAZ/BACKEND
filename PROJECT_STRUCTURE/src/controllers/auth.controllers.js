@@ -144,6 +144,28 @@ const verifyEmail=asyncHandler(async(req,res,next)=>{
   return res.status(200).json(
     new ApiResponse(200,null,"Email verified successfully"));
 })
+
+// logout controller
+const logout=asyncHandler(async(req,res,next)=>{
+  //clear refresh token from database
+  await UserTable.findByIdAndUpdate(req.user._id,{
+    $set:{refreshTokens:""}
+  });
+
+  // option to clear cookies from client side
+  const options={
+    httpOnly:true,
+    secure:true
+  }
+
+  // send response to client
+  return res.status(200)
+  .clearCookie("refreshToken",options)
+  .clearCookie("accessToken",options)
+  .json(
+    new ApiResponse(200,null,"User logged out successfully"));
+
+})
   
 
-export {registerUser,login,verifyEmail};
+export {registerUser,login,verifyEmail,logout};

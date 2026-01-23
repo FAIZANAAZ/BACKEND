@@ -26,6 +26,9 @@ npm i crypto
 
 npm i bcryptjs
 
+
+npm i cookie-parser      
+(for cookie reas express)
 Email Sending**************
 npm i mailgen(ye content bnany ke liye jesy ui)(https://www.npmjs.com/package/mailgen)
 npm install nodemailer(ye email send krny ke liye )

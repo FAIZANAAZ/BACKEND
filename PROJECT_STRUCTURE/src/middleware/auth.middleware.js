@@ -1,6 +1,11 @@
+import jwt from "jsonwebtoken";
+import {UserTable} from "../models/user.model.js";
+import {ApiError} from "../utils/api-error.js";
+import {asyncHandler} from "../utils/async.handler.js";
+
 export const verifyJWT=async(req,res,next)=>{
   // get token from cookies
-  const token =req.cookies?.access_token;
+  const token =req.cookies?.access_token
   // if token not found
   if(!token){
     return next(new ApiError(401,"Access token is missing"));

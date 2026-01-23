@@ -2,8 +2,14 @@ import express from "express";
 import cors from "cors";
 import healthCheckRoutes from "./routes/health.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import cookieParser from "cookie-parser";
+
+
 
 const app = express();
+
+//middleware to parse cookies from incoming requests
+app.use(cookieParser());
 
 app.use(express.json({ limit: "10kb" })); //body parser jo json data ko read krty hen
 app.use(express.urlencoded({ extended: true, limit: "10kb" })); //ye isi liye agr url me koi space wagera jo koi special character ho to wo b read kr ly
